@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rubik;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+.bg-very-dark {
+  background-color: hsl(0, 0%, 17%);
+}
+.very-dark {
+  color: hsl(0, 0%, 17%);
+}
+.bg-dark {
+  background-color: hsl(0, 0%, 59%);
+}
+.dark {
+  color: hsl(0, 0%, 59%);
+}
+
+header {
+  background: black url("./images/pattern-bg-desktop.png") no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  position: relative;
+  z-index: 99;
+}
+
+header h1 {
+  text-align: center;
+  padding: 25px 0;
+  color: white;
+  font-weight: 500;
+}
+
+header .input-container {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+input {
+  width: 35%;
+  height: 100%;
+  padding: 0 20px;
+  border: none;
+  outline: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: white;
+}
+
+button {
+  border: none;
+  background-color: black;
+  outline: none;
+  padding: 0 20px;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+button:hover {
+  background-color: rgb(62, 62, 62);
+}
+
+.info-container {
+  position: absolute;
+  top: calc(100% - 100.5px);
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  left: 50%;
+  translate: -50% 0;
+  background-color: white;
+  box-shadow: black 0px 5px 25px -15px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.info-container h2 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.info-container div span {
+  display: block;
+  font-size: 25px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.info-container div {
+  flex: 1;
+}
+
+.separator {
+  display: block;
+  height: 100px;
+  width: 1px;
+  margin: 0 20px;
+}
+
+@media (max-width: 960px) {
+  header {
+    background-image: url("./images/pattern-bg-mobile.png");
+  }
+  header .input-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  input {
+    width: 100%;
+  }
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    top: calc(100% - 140px);
+    padding: 20px;
+  }
+  .info-container h2 {
+    font-size: 14px;
+  }
+  .info-container div span {
+    padding-top: 5px;
+    font-size: 20px;
+  }
+  .separator {
+    display: none;
+  }
+}
+
+@media (min-height: 600px) and (max-height: 800px) {
+  header {
+    min-height: 250px;
+  }
+  header h1 {
+    padding-bottom: 10px;
+  }
+  .info-container {
+    padding: 30px 20px 20px;
+    top: calc(100% - 75px);
+  }
+}
+
+section {
+  height: calc(100dvh - 300px);
+  position: relative;
+  z-index: 0;
+}
+
+#map {
+  height: 100%;
+}
+
+@media (min-height: 600px) and (max-height: 800px) {
+  section {
+    height: calc(100dvh - 250px);
+  }
+}

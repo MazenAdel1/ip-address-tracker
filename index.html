@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>IP Address Tracker</h1>
+      <div class="input-container">
+        <input type="text" placeholder="Search for any IP address or domain" />
+        <button>
+          <img src="./images/icon-arrow.svg" alt="arrow" />
+        </button>
+      </div>
+      <div class="info-container">
+        <div>
+          <h2 class="dark">IP Address</h2>
+          <span class="ip">192.212.174.101</span>
+        </div>
+        <span class="separator bg-dark"></span>
+        <div>
+          <h2 class="dark">Location</h2>
+          <span class="location">Brooklyn, NY 10001</span>
+        </div>
+        <span class="separator bg-dark"></span>
+        <div>
+          <h2 class="dark">Timezone</h2>
+          <span class="timezone">UTC -05:00</span>
+        </div>
+        <span class="separator bg-dark"></span>
+        <div>
+          <h2 class="dark">ISP</h2>
+          <span class="isp">SpaceX Starlink</span>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div id="map"></div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
